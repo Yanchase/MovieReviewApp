@@ -1,0 +1,24 @@
+{
+  "name": "review_backend_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Yanchase/MovieReviewApp.git"
+  },
+  "author": "Wenwen Yan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yanchase/MovieReviewApp/issues"
+  },
+  "homepage": "https://github.com/Yanchase/MovieReviewApp#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  }
+}
