@@ -1,12 +1,16 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-mongoose
-  .connect(
-    "mongodb+srv://wenwenyan:yan1060732029@cluster0.cxebjv3.mongodb.net/?retryWrites=true&w=majority"
-  )
-  .then(() => {
+// Async function to connect to the database
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("db connected");
-  })
-  .catch((exp) => {
-    console.log("throw error: ", exp);
-  });
+  } catch (exp) {
+    console.error("throw error: ", exp);
+  }
+}
+
+// Call the function to make the connection
+connectDB();
